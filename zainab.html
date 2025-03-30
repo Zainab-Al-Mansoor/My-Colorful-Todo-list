@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>create elem in js and style in css</title>
+  </head>
+  <body>
+    <div class="con">
+        <ul id="liParent"></ul>
+
+    </div>
+    <style>
+        .con{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+
+        }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        width: 50%;
+      }
+      li {
+        background-color: antiquewhite;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      li button {
+        border: none;
+        font-weight: 800;
+        border-radius: 15px;
+        width: 30px;
+        height: 30px;
+        background-color: rgba(255, 15, 15, 0.848);
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      li button:hover {
+        background-color: red;
+      }
+    </style>
+    <script>
+      let listparent = document.getElementById("liParent");
+      let list = document.createElement("li");
+      list.innerHTML = `zainab <button>X</button>`;
+      listparent.appendChild(list);
+    </script>
+  </body>
+</html>
